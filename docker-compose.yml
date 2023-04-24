@@ -1,0 +1,17 @@
+services:
+  posts-app:
+    container_name: posts-app
+    build:
+      context: posts-app
+      dockerfile: Dockerfile
+    image: posts-app:latest
+    ports:
+      - 8081:8081
+  users-app:
+    container_name: users-app
+    build:
+      context: users-app
+      dockerfile: Dockerfile
+    image: users-app:latest
+    ports:
+      - 8080:8080
